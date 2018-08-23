@@ -67,7 +67,7 @@ class Student
 
     def update
       sql = <<-SQL
-      UPDATE students SET students.name = ?, students.grade = ?
+      UPDATE students SET students.name = ? students.grade = ?
       WHERE students.id = ?
       SQL
 
