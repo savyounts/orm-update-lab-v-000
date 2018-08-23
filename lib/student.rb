@@ -69,7 +69,7 @@ class Student
       WHERE students.id = ?"
       DB[:conn].execute(sql, self.name, self.grade, self.id)
     end
-  end
+  
 
 
 
