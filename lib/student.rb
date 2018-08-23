@@ -45,11 +45,11 @@ class Student
       student
     end
 
-    def self.new_from_db([id, name, grade])
-      student = self.new([id, name, grade])
-      student.id = id
-      student.name = name
-      student.grade = grade
+    def self.new_from_db(row)
+      student = self.new(row)
+      student.id = row[0]
+      student.name = row[1]
+      student.grade = row[2]
       student
     end
 
