@@ -40,8 +40,8 @@ class Student
       self.id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
     end
 
-    def self.create (name, grade)
-      student = self.new (name, grade)
+    def self.create
+      student = self.new
       student.save
       student
     end
@@ -65,8 +65,8 @@ class Student
       end
     end
 
-    def update 
-      sql = <<-SQL 
+    def update
+      sql = <<-SQL
       UPDATE students SET students.name = ?, students.grade = ?
       WHERE students.id = ?
       SQL
